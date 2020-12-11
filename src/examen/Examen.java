@@ -21,7 +21,7 @@ public class Examen {
         Scanner teclado=new Scanner(System.in);
         int opc=0;
         do{
-            System.out.println("Elija una opcion:\n1-Cambio de unidades horas a segundos\n2-Cambio de unidades kilometros a metros\n3-Salir");
+            System.out.println("Elija una opcion:\n1-Cambio de unidades horas a segundos\n2-Cambio de unidades kilometros a metros\n3-Conversion de km/h a m/s\n4-Salir");
             opc=teclado.nextInt();
             switch(opc){
                 case 1:
@@ -34,10 +34,14 @@ public class Examen {
                     double kilometros=teclado.nextDouble();
                     System.out.println(kilometros+" kilometros son "+kilometros*1000+" metros");
                     break;
+                case 3:
+                    System.out.println("Km/h?:");
+                    double kmh=teclado.nextDouble();
+                    System.out.println(kmh+" km/h son "+kmh/3.6+" m/s");
                 default: 
                     System.out.println("Saliste delprograma");
             }
-        }while(opc!=3);
+        }while(opc!=4);
     }
     
 }
